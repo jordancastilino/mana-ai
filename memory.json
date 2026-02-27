@@ -1,0 +1,373 @@
+{
+  "name": "Manasyee",
+  "preferred_name": "Manasyee",
+  "birthday": "2005-04-22",
+  "zodiac": "Taurus",
+  "study_field": "Law",
+  "career_goal": "Corporate lawyer specializing in M&A",
+  "likes": [
+    "The Weeknd",
+    "Fleetwood Mac",
+    "Gintama",
+    "anime",
+    "psychological thrillers",
+    "sad ending movies",
+    "law subjects",
+    "dark chocolate waffles",
+    "shawarma",
+    "paneer bhurji",
+    "good conversations with Jordan"
+  ],
+  "food_favorites": [
+    "Uncle Peters dark chocolate waffles",
+    "Sai Chinese",
+    "National shawarma",
+    "paneer bhurji"
+  ],
+  "inside_jokes": [
+    "Jordan is a distraction hazard",
+    "Law school villain arc",
+    "Anime training arc",
+    "Dark humor soft heart"
+  ],
+  "current_focus": [
+    "Studying law",
+    "Draft submission due 2026-02-14"
+  ],
+  "creator_name": "Jordan",
+  "recipient_name": "Manasyee",
+  "studies": "law",
+  "music_artists": [],
+  "movies_shows": [],
+  "notes": [],
+  "ui_message_pools": {},
+  "_ui_rotation": {
+    "jordan_messages": [
+      "Jordan says: your glow-up arc is real, keep going queen."
+    ],
+    "mood_boosters": [
+      "One deep breath now, one brave step next."
+    ],
+    "study_nudges": [
+      "15 min focus sprint - villain arc defeated.",
+      "Read 2 pages now; momentum will do the rest."
+    ]
+  },
+  "_version": "1.1",
+  "_updated_at": "2026-02-27T07:45:28.951962+05:30",
+  "_last_updated_by": "user",
+  "_memory_log": [
+    {
+      "ts": "2026-02-13T05:40:25.636994+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-13T05:40:25.641840+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-13T05:40:25.645082+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-13T05:41:58.057522+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-13T05:41:58.060236+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-13T05:41:58.062632+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T15:02:46.263010+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T15:02:46.265689+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T15:02:46.267473+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T15:59:17.021489+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T15:59:17.024475+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T15:59:17.026637+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T19:13:02.670604+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T19:13:02.673302+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T19:13:02.675564+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T19:22:10.518791+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T19:22:10.521777+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-14T19:22:10.524213+00:00",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:21:08.755012+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:21:08.759795+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:21:08.763748+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:26:36.436862+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:26:36.442855+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:26:36.447848+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:30:28.087536+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:30:28.093266+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:30:28.097604+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:34:49.157245+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:34:49.163284+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:34:49.168104+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:38:44.693695+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:38:44.699554+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T15:38:44.704925+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:11:19.048691+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:11:19.053226+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:11:19.056789+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:25:08.694190+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:25:08.699143+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:25:08.703338+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:27:00.009361+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:27:00.014532+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:27:00.018241+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:27:11.236905+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:27:11.242176+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:27:11.245618+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:36:55.128083+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T18:37:02.698992+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T18:41:53.432740+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T18:43:58.111900+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T18:45:27.236725+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T18:54:06.870428+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:54:06.876388+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T18:54:06.880821+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T19:03:58.856702+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T19:23:08.963162+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T19:34:26.013281+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T19:43:04.675160+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-21T19:59:02.065887+05:30",
+      "action": "save",
+      "key": "*"
+    },
+    {
+      "ts": "2026-02-21T20:00:23.775054+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    },
+    {
+      "ts": "2026-02-27T07:45:28.951962+05:30",
+      "action": "set",
+      "key": "period_cycles"
+    }
+  ],
+  "period_cycles": [
+    {
+      "start_date": "2026-02-18",
+      "end_date": "",
+      "note": ""
+    }
+  ],
+  "period_settings": {
+    "use_manual_cycle_length": false,
+    "manual_cycle_length": 28,
+    "luteal_days": 14
+  }
+}
