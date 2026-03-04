@@ -1888,6 +1888,8 @@ if "ui_theme" not in st.session_state or st.session_state.ui_theme not in THEME_
     st.session_state.ui_theme = "Dreamy"
 if "venice_mode_enabled" not in st.session_state:
     st.session_state.venice_mode_enabled = False
+if "venice_mode_last" not in st.session_state:
+    st.session_state.venice_mode_last = st.session_state.venice_mode_enabled
 if "venice_theme_backup" not in st.session_state:
     st.session_state.venice_theme_backup = st.session_state.ui_theme
 if st.session_state.venice_mode_enabled and st.session_state.ui_theme != "Erotic":
@@ -1931,13 +1933,15 @@ st.markdown(
 )
 
 with st.expander("\U0001F380 Mana Settings", expanded=False):
-    previous_venice_mode = st.session_state.get("venice_mode_enabled", False)
     st.toggle(
         "Noty Mode 💦",
         key="venice_mode_enabled",
         help="NSFW conversations enabled.",
     )
-    if st.session_state.venice_mode_enabled != previous_venice_mode:
+    previous_venice_mode = bool(st.session_state.get("venice_mode_last", False))
+    current_venice_mode = bool(st.session_state.get("venice_mode_enabled", False))
+
+    if current_venice_mode != previous_venice_mode:
         if st.session_state.venice_mode_enabled:
             if st.session_state.ui_theme != "Erotic":
                 st.session_state.venice_theme_backup = st.session_state.ui_theme
@@ -1947,6 +1951,7 @@ with st.expander("\U0001F380 Mana Settings", expanded=False):
             if restored_theme not in THEME_PRESETS or restored_theme == "Erotic":
                 restored_theme = "Dreamy"
             st.session_state.ui_theme = restored_theme
+        st.session_state.venice_mode_last = current_venice_mode
         st.rerun()
 
     tc1, tc2, tc3, tc4 = st.columns(4)
