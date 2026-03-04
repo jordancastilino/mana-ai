@@ -1,4 +1,4 @@
-﻿import datetime
+import datetime
 import json
 import os
 import random
@@ -63,6 +63,18 @@ THEME_PRESETS = {
         "button_top": "#4a2d58",
         "button_bottom": "#2f1c39",
     },
+    "Erotic": {
+        "bg_1": "#150008",
+        "bg_2": "#370014",
+        "bg_3": "#080004",
+        "orb_1": "rgba(255, 65, 125, 0.24)",
+        "orb_2": "rgba(130, 8, 45, 0.25)",
+        "text_main": "#ffeef4",
+        "text_soft": "#ffc8da",
+        "card_border": "rgba(255, 95, 150, 0.38)",
+        "button_top": "#b40943",
+        "button_bottom": "#6f0228",
+    },
 }
 
 st.set_page_config(
@@ -84,6 +96,7 @@ def get_config_value(key, default=""):
 
 
 MODEL_NAME = get_config_value("MODEL_NAME", "arcee-ai/trinity-large-preview:free")
+VENICE_MODEL_NAME = get_config_value("VENICE_MODEL_NAME", "venice/uncensored")
 OPENAI_BASE_URL = get_config_value("OPENAI_BASE_URL", "https://openrouter.ai/api/v1").rstrip("/")
 OPENROUTER_API_KEY = get_config_value("OPENROUTER_API_KEY", "") or get_config_value("OPENAI_API_KEY", "")
 # Backward-compatible alias for existing call sites.
@@ -91,6 +104,12 @@ OPENAI_API_KEY = OPENROUTER_API_KEY
 OPENROUTER_SITE_URL = get_config_value("OPENROUTER_SITE_URL", "")
 OPENROUTER_APP_NAME = get_config_value("OPENROUTER_APP_NAME", BOT_NAME)
 OPENROUTER_MAX_AUTO_CONTINUES = int(get_config_value("OPENROUTER_MAX_AUTO_CONTINUES", "4"))
+
+
+def get_active_chat_model():
+    if st.session_state.get("venice_mode_enabled", False):
+        return VENICE_MODEL_NAME
+    return MODEL_NAME
 
 
 DEFAULT_MEMORY = {
@@ -1862,6 +1881,12 @@ div[data-testid="stSidebar"] {
 
 if "ui_theme" not in st.session_state or st.session_state.ui_theme not in THEME_PRESETS:
     st.session_state.ui_theme = "Dreamy"
+if "venice_mode_enabled" not in st.session_state:
+    st.session_state.venice_mode_enabled = False
+if "venice_theme_backup" not in st.session_state:
+    st.session_state.venice_theme_backup = st.session_state.ui_theme
+if st.session_state.venice_mode_enabled and st.session_state.ui_theme != "Erotic":
+    st.session_state.ui_theme = "Erotic"
 active_theme = THEME_PRESETS[st.session_state.ui_theme]
 
 st.markdown(
@@ -1901,20 +1926,42 @@ st.markdown(
 )
 
 with st.expander("\U0001F380 Mana Settings", expanded=False):
+    previous_venice_mode = st.session_state.get("venice_mode_enabled", False)
+    st.toggle(
+        "Noty Mode 💦",
+        key="venice_mode_enabled",
+        help="Switch chat to the Venice model and apply erotic theme.",
+    )
+    if st.session_state.venice_mode_enabled != previous_venice_mode:
+        if st.session_state.venice_mode_enabled:
+            if st.session_state.ui_theme != "Erotic":
+                st.session_state.venice_theme_backup = st.session_state.ui_theme
+            st.session_state.ui_theme = "Erotic"
+        else:
+            restored_theme = st.session_state.get("venice_theme_backup", "Dreamy")
+            if restored_theme not in THEME_PRESETS or restored_theme == "Erotic":
+                restored_theme = "Dreamy"
+            st.session_state.ui_theme = restored_theme
+        st.rerun()
+
     st.caption(f"Theme: {st.session_state.ui_theme}")
+    st.caption(f"Chat model: {get_active_chat_model()}")
     tc1, tc2, tc3, tc4 = st.columns(4)
-    if tc1.button("Dreamy", use_container_width=True, key="theme_chip_dreamy"):
+    theme_locked = st.session_state.venice_mode_enabled
+    if tc1.button("Dreamy", use_container_width=True, key="theme_chip_dreamy", disabled=theme_locked):
         st.session_state.ui_theme = "Dreamy"
         st.rerun()
-    if tc2.button("Rose Gold", use_container_width=True, key="theme_chip_rose"):
+    if tc2.button("Rose Gold", use_container_width=True, key="theme_chip_rose", disabled=theme_locked):
         st.session_state.ui_theme = "Rose Gold"
         st.rerun()
-    if tc3.button("Night Sky", use_container_width=True, key="theme_chip_night"):
+    if tc3.button("Night Sky", use_container_width=True, key="theme_chip_night", disabled=theme_locked):
         st.session_state.ui_theme = "Night Sky"
         st.rerun()
-    if tc4.button("Dark", use_container_width=True, key="theme_chip_dark"):
+    if tc4.button("Dark", use_container_width=True, key="theme_chip_dark", disabled=theme_locked):
         st.session_state.ui_theme = "Dark"
         st.rerun()
+    if theme_locked:
+        st.caption("Theme is locked to Erotic while Venice mode is enabled.")
 
     playfulness = st.slider("Playfulness", 0, 100, 60, key="playfulness_slider")
 
@@ -2460,7 +2507,7 @@ def openrouter_chat(system_prompt, user_text, playfulness_value, conversation_hi
         messages.extend(conversation_history)
     messages.append({"role": "user", "content": user_text})
     payload = {
-        "model": MODEL_NAME,
+        "model": get_active_chat_model(),
         "messages": messages,
         "temperature": temperature,
         "top_p": top_p,
