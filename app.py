@@ -1934,7 +1934,7 @@ st.markdown(
 
 with st.expander("\U0001F380 Mana Settings", expanded=False):
     st.toggle(
-        "Noty Mode 💦",
+        "Uncensored Mode",
         key="venice_mode_enabled",
         help="NSFW conversations enabled.",
     )
